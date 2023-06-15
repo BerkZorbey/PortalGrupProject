@@ -23,10 +23,10 @@ Bu proje PortalGrop'un teknik gereksinimlerine göre oluşturulmuştur.
 - Kullanıcıdan çalışanın adı, soyadı, TC kimlik numarası, e-posta, telefon numarası ve doğum yılını alın. (Tüzel kişi olup olmadığını belirlemek için çalışanın adı, soyadı, TC kimlik numarası ve doğum yılını doğru giriniz.)
 - Bu bilgileri kullanarak yeni bir çalışan oluşturun.
 - İlgili çalışanı bir projeye atamak için çalışanın ID'sini ve projenin ID'sini alın
-<img src="hhttps://github.com/BerkZorbey/PortalGrupProject/assets/63355948/5bdc8f66-f76c-4c30-8d3e-ce836539967b" width="900px" height="400px">
+<img src="https://github.com/BerkZorbey/PortalGrupProject/assets/63355948/5bdc8f66-f76c-4c30-8d3e-ce836539967b" width="900px" height="400px">
 <br/><br/><br/>
 
-<img src="hhttps://github.com/BerkZorbey/PortalGrupProject/assets/63355948/7a8a8ef7-7f20-4876-a7da-d12f8f82716d" width="900px" height="400px">
+<img src="https://github.com/BerkZorbey/PortalGrupProject/assets/63355948/7a8a8ef7-7f20-4876-a7da-d12f8f82716d" width="900px" height="400px">
 <br/><br/><br/>
 
 ## SQL Trigger ile Çalışan Sayısını Artırma:
@@ -69,7 +69,7 @@ Bu proje PortalGrop'un teknik gereksinimlerine göre oluşturulmuştur.
 
 - İş tamamlandığında, çalışanın tamamladığı işleri ve projede tamamlanan işleri artırmak için bir SQL Trigger kullanın.
 - Raporlama gerektiğinde, şirketin ID'siyle şirketteki projeleri, işlerin sayısını görebilirsiniz.
-<img src="https://github.com/BerkZorbey/PortalGrupProject/assets/63355948/b0f85f49-3660-41d3-b406-9dd5a981bdc4" width="900px" height="400px">
+<img src="https://github.com/BerkZorbey/PortalGrupProject/assets/63355948/b0f85f49-3660-41d3-b406-9dd5a981bdc4" width="900px" height="600px">
 <br/><br/><br/>
 
 
