@@ -25,6 +25,8 @@ namespace Nowadays.Mapper
             CreateMap<CompanyDTO, Company>();
             CreateMap<Issue, IssueDTO>();
             CreateMap<IssueDTO, Issue>();
+            CreateMap<Report, ReportDTO>();
+            CreateMap<ReportDTO, Report>();
             CreateMap<ProjectEmployee, ProjectEmployeeDTO>();
             CreateMap<ProjectEmployeeDTO, ProjectEmployee>();
 

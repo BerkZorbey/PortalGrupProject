@@ -55,7 +55,7 @@ namespace Nowadays.Services.Concrete.Base
             }
             catch (Exception ex)
             {
-                return new ResponseModel(400, ex);
+                return new ResponseModel(400, ex.Message);
             }
 
         }
@@ -75,7 +75,7 @@ namespace Nowadays.Services.Concrete.Base
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
 
         }
@@ -95,7 +95,7 @@ namespace Nowadays.Services.Concrete.Base
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
 
         }

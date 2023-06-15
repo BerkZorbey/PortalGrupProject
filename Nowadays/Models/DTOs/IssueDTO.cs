@@ -6,7 +6,6 @@ namespace Nowadays.Models.DTOs
     {
         public string? Title { get; set; }
         public string? Description { get; set; }
-        public Guid? EmployeeId { get; set; }
         public Guid? ReportingEmployeeId { get; set; }
         public TagType Tag { get; set; }
         public string? IssueNo { get; set; }

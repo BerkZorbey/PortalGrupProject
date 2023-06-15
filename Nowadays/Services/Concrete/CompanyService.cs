@@ -41,7 +41,7 @@ namespace Nowadays.Services.Concrete
             }
             catch(Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
 
         }

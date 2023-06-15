@@ -4,6 +4,7 @@ using Nowadays.Models.ResponseModels;
 using Nowadays.Models;
 using Nowadays.Services.Abstract;
 using Nowadays.Services.Concrete;
+using Nowadays.Models.DTOs;
 
 namespace Nowadays.Controllers
 {
@@ -18,7 +19,7 @@ namespace Nowadays.Controllers
             _reportService = reportService;
         }
         [HttpGet("{id}")]
-        public async Task<ResponseModel<Report>> GetReportByCompanyId(string id)
+        public async Task<ResponseModel<ReportDTO>> GetReportByCompanyId(string id)
         {
             var report = await _reportService.GetReportByCompanyId(id);
             return report;

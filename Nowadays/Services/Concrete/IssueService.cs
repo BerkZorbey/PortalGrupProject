@@ -38,7 +38,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
         public async Task<ResponseModel> UpdateDescription(string id, string Description)
@@ -57,7 +57,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
         public async Task<ResponseModel> ChangeStatus(string id,StatusType statusType)
@@ -76,7 +76,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
         public async Task<ResponseModel> UpdateIssueAssignEmployee(string id, string emloyeeId)
@@ -95,7 +95,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
         public async Task<ResponseModel> UpdateIssueReportingEmployee(string id, string reportingEmployeeId)
@@ -114,7 +114,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
     }

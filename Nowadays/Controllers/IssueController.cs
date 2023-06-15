@@ -49,19 +49,19 @@ namespace Nowadays.Controllers
             var response = await _issueService.ChangeIssueSetting(id, ıssueSetting);
             return response;
         }
-        [HttpPatch("{id}")]
+        [HttpPatch("{id}/changeStatus")]
         public async Task<ResponseModel> ChangeStatus(string id,[FromBody]StatusType statusType)
         {
             var response = await _issueService.ChangeStatus(id,statusType);
             return response;
         }
-        [HttpPatch("{id}/description")]
-        public async Task<ResponseModel> UpdateDescription(string id, string Description)
+        [HttpPatch("{id}/updateDescription")]
+        public async Task<ResponseModel> UpdateDescription(string id,[FromBody] string Description)
         {
             var response = await _issueService.UpdateDescription(id, Description);
             return response;
         }
-        [HttpPatch("assign/{id}/{employeeId}")]
+        [HttpPatch("assignEmployee/{id}/{employeeId}")]
         public async Task<ResponseModel> UpdateIssueAssignEmployee(string id, string employeeId)
         {
             var response = await _issueService.UpdateIssueAssignEmployee(id, employeeId);

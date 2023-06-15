@@ -41,9 +41,18 @@
         }
         public ResponseModel(int statusCode, string message)
         {
-            StatusCode = statusCode;
-            Success = true;
-            Message = message;
+            if(statusCode == 200 || statusCode == 201)
+            {
+                StatusCode = statusCode;
+                Success = true;
+                Message = message;
+            }
+            else
+            {
+                StatusCode = statusCode;
+                Success = false;
+                Message = message;
+            }
         }
         public ResponseModel(string message)
         {

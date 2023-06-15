@@ -2,8 +2,9 @@
 {
     public class ReportEmployeeDTO
     {
-        public string FullName { get; set; }
+        public string FullName { get; set; } 
         public int CountAssignedIssues { get; set; }
         public int CountCompletedIssues { get; set; }
+
     }
 }

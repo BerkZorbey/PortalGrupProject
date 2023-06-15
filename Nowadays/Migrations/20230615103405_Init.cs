@@ -33,6 +33,7 @@ namespace Nowadays.Migrations
                     IdentityNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BirthDateYear = table.Column<int>(type: "int", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -106,6 +107,8 @@ namespace Nowadays.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProjectId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EmployeeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CountAssignedIssues = table.Column<int>(type: "int", nullable: false),
+                    CountCompletedIssues = table.Column<int>(type: "int", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

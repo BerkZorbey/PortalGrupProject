@@ -11,11 +11,31 @@ namespace Nowadays.Services.Concrete
     public class ProjectService : BaseService<Project>, IProjectService
     {
         private readonly IBaseRepository<Project> _repository;
+        private readonly ICompanyRepository _companyRepository;
         private readonly IUnitOfWork _unitOfWork;
-        public ProjectService(IUnitOfWork unitOfWork, IBaseRepository<Project> baseRepository) : base(unitOfWork, baseRepository)
+        public ProjectService(IUnitOfWork unitOfWork, IBaseRepository<Project> baseRepository, ICompanyRepository companyRepository) : base(unitOfWork, baseRepository)
         {
             _repository = baseRepository;
             _unitOfWork = unitOfWork;
+            _companyRepository = companyRepository;
+        }
+        public override async Task<ResponseModel> InsertAsync(Project project)
+        {
+            try
+            {
+                var company = _companyRepository.GetById(project.CompanyId);
+                if (company is null)
+                {
+                    throw new Exception("Company Id is not valid.");
+                }
+                var result = await _repository.InsertAsync(project);
+                await _unitOfWork.CompleteAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new ResponseModel(400, ex.Message);
+            }
         }
         public override async Task<ResponseModel> UpdateAsync(string id, Project updatedProject)
         {
@@ -35,7 +55,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
     }

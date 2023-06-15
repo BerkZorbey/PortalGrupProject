@@ -12,7 +12,7 @@ using Nowadays.EFCoreDbContext;
 namespace Nowadays.Migrations
 {
     [DbContext(typeof(NowadaysDbContext))]
-    [Migration("20230614230730_Init")]
+    [Migration("20230615103405_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,9 @@ namespace Nowadays.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("BirthDateYear")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -165,6 +168,12 @@ namespace Nowadays.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CountAssignedIssues")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CountCompletedIssues")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");

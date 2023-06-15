@@ -8,6 +8,8 @@ namespace Nowadays.Models.ValueObject
         public Project? Project { get; set; }
         public string EmployeeId { get; set; }
         public Employee? Employee { get; set; }
-       
+        public int CountAssignedIssues { get; set; }
+        public int CountCompletedIssues { get; set; }
+
     }
 }

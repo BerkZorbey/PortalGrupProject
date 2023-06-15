@@ -6,6 +6,6 @@ namespace Nowadays.Repositories.Abstract
 {
     public interface IProjectEmployeeRepository : IBaseRepository<ProjectEmployee>
     {
-        public Task<ResponseModel<IEnumerable<ProjectEmployee>>> GetByProjectId(string projectId);
+        public Task<ResponseModel<List<ProjectEmployee>>> GetByProjectId(string projectId);
     }
 }

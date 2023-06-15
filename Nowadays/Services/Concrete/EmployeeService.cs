@@ -45,7 +45,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(400, ex);
+                return new ResponseModel(400, ex.Message);
             }
         }
         private async Task<bool> IdentityVerification(Employee employee)
@@ -76,7 +76,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
         public async Task<ResponseModel> UpdateEmployeeSettingAsync(string id,Employee updateEmployee)
@@ -92,7 +92,7 @@ namespace Nowadays.Services.Concrete
             }
             catch (Exception ex)
             {
-                return new ResponseModel(404, ex);
+                return new ResponseModel(404, ex.Message);
             }
         }
     }
